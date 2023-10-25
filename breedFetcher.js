@@ -11,10 +11,10 @@ request(url, (error, response, body) => {
     for (let arr of data) {
       results[arr["name"]] = arr.description;
     }
-    if (results[breedName]) {
-      console.log(results[breedName]);
+    if (results[breedName]) { //if breedname presents in results
+      console.log(results[breedName]); //displays that breeds description through results obj
     } else {
-      console.log("breed not found");
+      console.log("The requested breed is not found in this server");
     }
   } else {
     console.log(error);
